@@ -16,7 +16,8 @@ function ahillio_wysiwyg_ckeditor_profile_defaults() {
         'toolbar' => '[
     [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'Subscript\',\'Superscript\',\'JustifyLeft\',\'JustifyCenter\'],
     [\'Format\',\'BulletedList\',\'NumberedList\',\'Indent\',\'Outdent\',\'Blockquote\'],
-    [\'linkit\',\'Media\',\'Table\',\'-\',\'ShowBlocks\',\'RemoveFormat\',\'Source\']
+    [\'linkit\',\'Media\',\'Table\'],
+    [\'ShowBlocks\',\'RemoveFormat\',\'Source\']
 ]',
         'expand' => 't',
         'default' => 't',
@@ -52,6 +53,8 @@ function ahillio_wysiwyg_ckeditor_profile_defaults() {
         'filebrowser_flash' => '',
         'UserFilesPath' => '%b%f/',
         'UserFilesAbsolutePath' => '%d%b%f/',
+        'ckeditor_load_method' => 'ckeditor.js',
+        'ckeditor_load_time_out' => 0,
         'forcePasteAsPlainText' => 'f',
         'html_entities' => 'f',
         'scayt_autoStartup' => 'f',
@@ -70,22 +73,10 @@ function ahillio_wysiwyg_ckeditor_profile_defaults() {
             ),
             'default' => 't',
           ),
-          'image2' => array(
-            'name' => 'image2',
-            'desc' => 'Enhanced Image plugin. See <a href="http://ckeditor.com/addon/image2">addon page</a> for more details.',
-            'path' => '//cdn.ckeditor.com/4.4.3/full-all/plugins/image2/',
-            'buttons' => array(
-              'Enhanced Image' => array(
-                'icon' => 'icons/image.png',
-                'label' => 'Insert Enhanced Image',
-              ),
-            ),
-            'default' => 't',
-          ),
           'linkit' => array(
             'name' => 'linkit',
             'desc' => 'Support for Linkit module',
-            'path' => '%base_path%sites/all/modules/contrib/linkit/editors/ckeditor/',
+            'path' => '%base_path%sites/all/modules/linkit/editors/ckeditor/',
             'buttons' => array(
               'linkit' => array(
                 'label' => 'Linkit',
@@ -107,8 +98,8 @@ function ahillio_wysiwyg_ckeditor_profile_defaults() {
           ),
           'tableresize' => array(
             'name' => 'tableresize',
-            'desc' => 'Table Resize plugin. See <a href="http://ckeditor.com/addon/tableresize">addon page</a> for more details.',
-            'path' => '//cdn.ckeditor.com/4.4.3/full-all/plugins/tableresize/',
+            'desc' => 'Table Resize plugin',
+            'path' => '%editor_path%/plugins/tableresize/',
             'buttons' => FALSE,
             'default' => 't',
           ),

@@ -1,0 +1,14 @@
+name = ahillio_wysiwyg
+core = 7.x
+package = Features
+dependencies[] = ckeditor
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = filter
+dependencies[] = linkit
+dependencies[] = media
+features[ckeditor_profile][] = Full
+features[ctools][] = linkit:linkit_profiles:1
+features[features_api][] = api:2
+features[filter][] = html
+features[linkit_profiles][] = wysiwyg

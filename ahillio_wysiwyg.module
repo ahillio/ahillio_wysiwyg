@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the ahillio_wysiwyg feature.
+ */
+
+include_once 'ahillio_wysiwyg.features.inc';

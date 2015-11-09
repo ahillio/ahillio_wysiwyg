@@ -39,8 +39,8 @@ function ahillio_wysiwyg_ckeditor_profile_defaults() {
             'indent' => 'indent',
             'breakBeforeOpen' => 'breakBeforeOpen',
             'breakAfterOpen' => 'breakAfterOpen',
+            'breakBeforeClose' => 'breakBeforeClose',
             'breakAfterClose' => 'breakAfterClose',
-            'breakBeforeClose' => 0,
             'pre_indent' => 0,
           ),
         ),
@@ -87,11 +87,11 @@ function ahillio_wysiwyg_ckeditor_profile_defaults() {
           'media' => array(
             'name' => 'media',
             'desc' => 'Plugin for inserting images from Drupal media module',
-            'path' => '%plugin_dir%media/',
+            'path' => '/sites/ahillio/modules/media/modules/media_wysiwyg/wysiwyg_plugins/media_ckeditor/',
             'buttons' => array(
               'Media' => array(
-                'label' => 'Media',
                 'icon' => 'images/icon.gif',
+                'label' => 'Add media',
               ),
             ),
             'default' => 'f',
@@ -106,7 +106,7 @@ function ahillio_wysiwyg_ckeditor_profile_defaults() {
         ),
       ),
       'input_formats' => array(
-        'html' => 'HTML',
+        'html' => 'WYSIWYG',
       ),
     ),
   );

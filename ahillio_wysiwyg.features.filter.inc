@@ -10,10 +10,20 @@
 function ahillio_wysiwyg_filter_default_formats() {
   $formats = array();
 
-  // Exported format: HTML.
+  // Exported format: Ace Editor.
+  $formats['ace_editor'] = array(
+    'format' => 'ace_editor',
+    'name' => 'Ace Editor',
+    'cache' => 1,
+    'status' => 1,
+    'weight' => 100,
+    'filters' => array(),
+  );
+
+  // Exported format: WYSIWYG.
   $formats['html'] = array(
     'format' => 'html',
-    'name' => 'HTML',
+    'name' => 'WYSIWYG',
     'cache' => 1,
     'status' => 1,
     'weight' => 0,
@@ -24,6 +34,11 @@ function ahillio_wysiwyg_filter_default_formats() {
         'settings' => array(
           'filter_url_length' => 72,
         ),
+      ),
+      'media_filter' => array(
+        'weight' => 2,
+        'status' => 1,
+        'settings' => array(),
       ),
     ),
   );

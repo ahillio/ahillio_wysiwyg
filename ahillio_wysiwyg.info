@@ -9,6 +9,7 @@ dependencies[] = linkit
 dependencies[] = media
 dependencies[] = media_wysiwyg
 dependencies[] = strongarm
+dependencies[] = ace_editor
 features[ckeditor_profile][] = Full
 features[ctools][] = linkit:linkit_profiles:1
 features[ctools][] = strongarm:strongarm:1

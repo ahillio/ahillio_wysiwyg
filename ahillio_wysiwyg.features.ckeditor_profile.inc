@@ -16,7 +16,7 @@ function ahillio_wysiwyg_ckeditor_profile_defaults() {
         'toolbar' => '[
     [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'Subscript\',\'Superscript\',\'JustifyLeft\',\'JustifyCenter\'],
     [\'Format\',\'BulletedList\',\'NumberedList\',\'Indent\',\'Outdent\',\'Blockquote\'],
-    [\'linkit\',\'Media\',\'Table\'],
+    [\'linkit\',\'Table\'],
     [\'ShowBlocks\',\'RemoveFormat\',\'Source\']
 ]',
         'expand' => 't',
@@ -53,8 +53,6 @@ function ahillio_wysiwyg_ckeditor_profile_defaults() {
         'filebrowser_flash' => '',
         'UserFilesPath' => '%b%f/',
         'UserFilesAbsolutePath' => '%d%b%f/',
-        'ckeditor_load_method' => 'ckeditor.js',
-        'ckeditor_load_time_out' => 0,
         'forcePasteAsPlainText' => 'f',
         'html_entities' => 'f',
         'scayt_autoStartup' => 'f',
@@ -76,7 +74,7 @@ function ahillio_wysiwyg_ckeditor_profile_defaults() {
           'linkit' => array(
             'name' => 'linkit',
             'desc' => 'Support for Linkit module',
-            'path' => '%base_path%sites/all/modules/linkit/editors/ckeditor/',
+            'path' => '%base_path%sites/all/modules/contrib/linkit/editors/ckeditor/',
             'buttons' => array(
               'linkit' => array(
                 'label' => 'Linkit',
@@ -84,28 +82,17 @@ function ahillio_wysiwyg_ckeditor_profile_defaults() {
               ),
             ),
           ),
-          'media' => array(
-            'name' => 'media',
-            'desc' => 'Plugin for inserting images from Drupal media module',
-            'path' => '/sites/ahillio/modules/media/modules/media_wysiwyg/wysiwyg_plugins/media_ckeditor/',
-            'buttons' => array(
-              'Media' => array(
-                'icon' => 'images/icon.gif',
-                'label' => 'Add media',
-              ),
-            ),
-            'default' => 'f',
-          ),
           'tableresize' => array(
             'name' => 'tableresize',
-            'desc' => 'Table Resize plugin',
-            'path' => '%editor_path%/plugins/tableresize/',
+            'desc' => 'Table Resize plugin. See <a href="http://ckeditor.com/addon/tableresize">addon page</a> for more details.',
+            'path' => '//cdn.ckeditor.com/4.5.4/full-all/plugins/tableresize/',
             'buttons' => FALSE,
             'default' => 't',
           ),
         ),
       ),
       'input_formats' => array(
+        'full_html' => 'Full HTML',
         'html' => 'WYSIWYG',
       ),
     ),

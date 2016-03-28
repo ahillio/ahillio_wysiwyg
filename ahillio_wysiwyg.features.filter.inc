@@ -35,11 +35,6 @@ function ahillio_wysiwyg_filter_default_formats() {
           'filter_url_length' => 72,
         ),
       ),
-      'media_filter' => array(
-        'weight' => 2,
-        'status' => 1,
-        'settings' => array(),
-      ),
     ),
   );
 
